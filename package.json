@@ -1,0 +1,35 @@
+{
+  "name": "vuetailor",
+  "version": "0.1.0",
+  "description": "Visual code generator for vuejs and tailwindcss",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picofuture/vuetailor.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "tailwind",
+    "tailwindcss",
+    "editor",
+    "ui",
+    "code",
+    "codebase",
+    "generator"
+  ],
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  },
+  "author": "Pico Future",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/picofuture/vuetailor/issues"
+  },
+  "homepage": "https://github.com/picofuture/vuetailor#readme"
+}
