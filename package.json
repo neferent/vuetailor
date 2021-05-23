@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "gridsome": "^0.7.0",
+    "tailwindcss": "^2.1.2",
     "vuex": "^3.6.2"
   },
   "author": "Pico Future",
@@ -32,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/picofuture/vuetailor/issues"
   },
-  "homepage": "https://github.com/picofuture/vuetailor#readme"
+  "homepage": "https://github.com/picofuture/vuetailor#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3"
+  }
 }
