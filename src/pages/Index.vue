@@ -1,13 +1,19 @@
 <template>
     <Layout>
-        <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+        <top-navbar></top-navbar>
     </Layout>
 </template>
 
 <script>
+import TopNavbar from "~/components/system/TopNavbar";
+
 export default {
     metaInfo: {
-        title: "Hello, world!"
+        title: "Landing"
+    },
+
+    components: {
+        TopNavbar
     }
 };
 </script>
