@@ -7,6 +7,9 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["Poppins", ...defaultTheme.fontFamily.sans]
+            },
+            height: {
+                container: "calc(100% - 3.5rem)"
             }
         }
     },

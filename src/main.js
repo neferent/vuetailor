@@ -27,4 +27,8 @@ export default function(Vue, { appOptions, head }) {
     });
 
     Vue.use(VTooltip);
+
+    head.htmlAttrs = { class: ["h-screen"] };
+
+    head.bodyAttrs = { class: ["bg-gray-700", "h-screen"] };
 }

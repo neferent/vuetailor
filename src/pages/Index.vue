@@ -1,11 +1,14 @@
 <template>
-    <Layout>
-        <top-navbar></top-navbar>
+    <Layout class="h-screen">
+        <top-navbar class="h-14" />
+
+        <container class="h-container" />
     </Layout>
 </template>
 
 <script>
 import TopNavbar from "~/components/system/TopNavbar";
+import Container from "~/components/system/Container";
 
 export default {
     metaInfo: {
@@ -13,7 +16,8 @@ export default {
     },
 
     components: {
-        TopNavbar
+        TopNavbar,
+        Container
     }
 };
 </script>
