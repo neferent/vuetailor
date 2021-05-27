@@ -1,8 +1,8 @@
 <template>
     <div class="flex">
         <left-navbar class="w-1/6" />
-        <div class="bg-red-400 w-4/6">1</div>
-        <div class="bg-yellow-400 w-1/6">2</div>
+        <div class="bg-white w-4/6 overflow-y-auto"></div>
+        <div class="bg-gray-800 w-1/6 overflow-y-auto"></div>
     </div>
 </template>
 
