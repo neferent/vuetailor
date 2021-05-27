@@ -44,35 +44,46 @@
 
 <script>
 import ScreenResolutionControl from "./nav-components/ScreenResolutionControl.vue";
+import KeyboardEventsMixin from "~/js/mixins/KeyboardEventsMixin.js";
+import { mapGetters, mapActions } from "vuex";
+import MutationsEnum from "~/store/modules/keyboardevents/MutationsEnum";
 
 export default {
+    mixins: [KeyboardEventsMixin],
+
     components: {
         ScreenResolutionControl
     },
 
     data() {
         return {
-            resolutionControlActiveIndex: 0,
-            resolutionControlIndexMap: {
-                0: "desktop",
-                1: "tablet",
-                2: "mobile"
-            }
+            resolutionControlActiveIndex: null
         };
     },
 
-    methods: {
-        handleResolutionControlClick(index) {
-            this.resolutionControlActiveIndex = index;
+    mounted() {
+        this.resolutionControlActiveIndex = this.currentlyActiveResolutionControl;
+    },
 
-            this.$emit(
-                "resolution-control",
-                this.resolutionControlIndexMap[index]
-            );
+    methods: {
+        ...mapActions("KeyboardEvents", [MutationsEnum.CHANGE_RESOLUTION]),
+
+        handleResolutionControlClick(index) {
+            this[MutationsEnum.CHANGE_RESOLUTION](index);
         },
 
         handleCodeDownload() {
             this.$emit("download-code");
+        }
+    },
+
+    computed: {
+        ...mapGetters("KeyboardEvents", ["currentlyActiveResolutionControl"])
+    },
+
+    watch: {
+        currentlyActiveResolutionControl() {
+            this.resolutionControlActiveIndex = this.currentlyActiveResolutionControl;
         }
     }
 };
