@@ -33,11 +33,20 @@
         </div>
 
         <div class="w-1/4">
-            <screen-resolution-control
-                type="download"
-                @click="handleCodeDownload"
-                class="absolute right-0 mr-4 my-4"
-            />
+            <ul class="absolute right-0 inline-flex mr-4 my-4 space-x-4">
+                <li>
+                    <screen-resolution-control
+                        type="download"
+                        @click="handleCodeDownload"
+                    />
+                </li>
+                <li>
+                    <screen-resolution-control
+                        type="help"
+                        @click="handleCodeDownload"
+                    />
+                </li>
+            </ul>
         </div>
     </nav>
 </template>

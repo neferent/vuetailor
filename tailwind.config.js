@@ -10,6 +10,9 @@ module.exports = {
             },
             height: {
                 container: "calc(100% - 3.5rem)"
+            },
+            transitionProperty: {
+                width: "width"
             }
         }
     },

@@ -30,5 +30,5 @@ export default function(Vue, { appOptions, head }) {
 
     head.htmlAttrs = { class: ["h-screen"] };
 
-    head.bodyAttrs = { class: ["bg-gray-700", "h-screen"] };
+    head.bodyAttrs = { class: ["h-screen"] };
 }
