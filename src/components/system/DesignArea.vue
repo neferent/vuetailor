@@ -4,30 +4,19 @@
             `transition-all transform ease-out duration-700 ${currentResolutionClass}`
         "
     >
-        <!-- Added inner div to avoid the transitions from the top div -->
-        <div
-            :class="`w-full h-full ${focusElementClass}`"
-            @dragover="handleDragOver"
-            @dragend="handleDragEnd"
-            @drop="handleDrop"
-            @dragleave="handleDragEnd"
-        >
-            <component
-                v-for="(component, index) in componentArray"
-                :key="index"
-                :is="component"
-            />
-        </div>
+        <droppable-component> </droppable-component>
     </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import ResolutionControlEnum from "~/js/enums/ResolutionControlEnum";
-import DropPropertyMixin from "~/js/mixins/DropPropertyMixin";
+import DroppableComponent from "./DroppableComponent";
 
 export default {
-    mixins: [DropPropertyMixin],
+    components: {
+        DroppableComponent
+    },
 
     computed: {
         ...mapGetters("KeyboardEvents", ["currentlyActiveResolutionControl"]),
