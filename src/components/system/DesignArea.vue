@@ -11,7 +11,7 @@
 <script>
 import { mapGetters } from "vuex";
 import ResolutionControlEnum from "~/js/enums/ResolutionControlEnum";
-import BodyComponent from "./Body";
+import BodyComponent from "./BodyComponent";
 
 export default {
     components: {

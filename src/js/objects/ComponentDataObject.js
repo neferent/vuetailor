@@ -1,4 +1,4 @@
-import Container from "~/components/designer/components/Container";
+import Container from "~/components/designer/components/ContainerComponent";
 
 const componentDataObject = {
     // Provide the metadata here.
