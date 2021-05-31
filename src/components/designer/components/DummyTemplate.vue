@@ -1,7 +1,7 @@
 <template>
     <div
         :class="focusElementClass"
-        class="bg-green-600 w-full h-full"
+        class="w-full h-full"
         @dragover="handleDragOver"
         @dragend="handleDragEnd"
         @drop="handleDrop"
@@ -19,8 +19,6 @@
 import DroppableEventsMixin from "~/js/mixins/DroppableEventsMixin";
 
 export default {
-    name: "container",
-
     mixins: [DroppableEventsMixin]
 };
 </script>

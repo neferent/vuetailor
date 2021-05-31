@@ -4,21 +4,18 @@
             `transition-all transform ease-out duration-700 ${currentResolutionClass}`
         "
     >
-        <droppable-comp />
+        <body-component />
     </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import ResolutionControlEnum from "~/js/enums/ResolutionControlEnum";
-import DroppableComponent from "./DroppableComponent";
-import withDroppableAbility from "~/js/hocs/withDroppableAbility";
-
-const DroppableComp = withDroppableAbility(DroppableComponent);
+import BodyComponent from "./Body";
 
 export default {
     components: {
-        DroppableComp
+        BodyComponent
     },
 
     computed: {
